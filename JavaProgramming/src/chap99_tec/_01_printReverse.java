@@ -1,4 +1,4 @@
-package chat99_tec;
+package chap99_tec;
 
 public class _01_printReverse {
 

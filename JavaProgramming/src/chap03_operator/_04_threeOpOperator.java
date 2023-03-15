@@ -29,15 +29,11 @@ public class _04_threeOpOperator {
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
+	
 		
 
 	}
 
 }
+
+
