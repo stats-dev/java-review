@@ -15,6 +15,10 @@ public class _04_arrayExample {
 				char[] wdlArr = new char[10];
 				int[] resultCnt = new int[3];
 				
+				int winCnt = 0;
+				int drawCnt = 0;
+				int loseCnt = 0;
+				
 				
 				for(int i = 0; i < 10; i++) {
 					int com = rd.nextInt(3);
@@ -36,19 +40,22 @@ public class _04_arrayExample {
 					}
 					
 					if(com == inputNum) {
-						System.out.println("비겼습니다.");
 						wdlArr[i] = 'd';
+						System.out.println("비겼습니다.");
+						//drawCnt++;
 						resultCnt[1]++;
 					} else {
 						if((inputNum == 0 && com == 1) ||
 							(inputNum == 1 && com == 0) ||
 							(inputNum == 2 && com == 2)) {
-							System.out.println("이겼습니다.");
 							wdlArr[i] = 'w';
+							System.out.println("이겼습니다.");
+							//winCnt++;
 							resultCnt[0]++;
 						} else {
-							System.out.println("졌습니다.");
 							wdlArr[i] = 'l';
+							System.out.println("졌습니다.");
+							//loseCnt++;
 							resultCnt[2]++;
 						}
 					}
@@ -63,6 +70,23 @@ public class _04_arrayExample {
 				
 				//몇승,몇무,몇패 출력
 				System.out.println("승부 결과는" + resultCnt[0] + "승" + resultCnt[1] + "무" + resultCnt[2] + "패 입니다.");
+
+
+				
+				for(int j = 0; j < wdlArr.length; j++) {
+					if(wdlArr[j] == 'w') {
+						System.out.println(j + "판의 결과 : " + "승");
+						winCnt++;
+					} else if(wdlArr[j] == 'd') {
+						System.out.println(j + "판의 결과 : " + "무");
+						drawCnt++;
+					} else if(wdlArr[j] == 'l') {
+						System.out.println(j + "판의 결과 : " + "패");
+						loseCnt++;
+					}
+				}
+				
+				System.out.println(winCnt + "승" + drawCnt + "무" + loseCnt + "패");
 				
 				
 				
