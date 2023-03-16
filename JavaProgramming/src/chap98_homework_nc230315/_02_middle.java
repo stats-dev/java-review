@@ -78,7 +78,7 @@ public class _02_middle {
 			System.out.println("이겼습니다.");
 		}
 		
-		
+		sc.close();
 		
 	}
 
