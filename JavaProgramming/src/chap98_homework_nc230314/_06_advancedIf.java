@@ -1,4 +1,4 @@
-package chap98_homework_nc230315;
+package chap98_homework_nc230314;
 
 public class _06_advancedIf {
 

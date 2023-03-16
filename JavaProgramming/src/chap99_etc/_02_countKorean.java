@@ -1,4 +1,4 @@
-package chap99_tec;
+package chap99_etc;
 
 public class _02_countKorean {
 

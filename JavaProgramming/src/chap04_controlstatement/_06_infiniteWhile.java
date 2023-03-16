@@ -18,7 +18,8 @@ public class _06_infiniteWhile {
 			String inputStr = sc.nextLine(); // next 시리즈가 여러가지 있다. 다음에 올 것을 쓴다.
 			
 			if(inputStr.equals("1")) {
-				break;
+				System.out.println("종료되었습니다.");
+				break; // break문으로 무한반복도 다 종료가 가능하다!!!!! 필요하면 이렇게 써보자.
 			}
 			
 			
