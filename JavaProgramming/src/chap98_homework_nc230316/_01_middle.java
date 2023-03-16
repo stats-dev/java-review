@@ -20,14 +20,36 @@ public class _01_middle {
 		}
 		
 		for(int i=0;i<intArr.length;i++) {
+			System.out.println();
 			if(i % 2 == 0) {
-				System.out.println("짝수 인덱스 " + i + ": " + intArr[intArr.length - i - 1]); // 인덱스 짝수는 뒤에서 출력
+				System.out.print("짝수 인덱스 " + i + ": " + intArr[intArr.length - i - 1]); // 인덱스 짝수는 뒤에서 출력
 			} else {
-				System.out.println("홀수 인덱스 " + i + ": " + intArr[i]); // 홀수는 그대로 출력
+				System.out.print("홀수 인덱스 " + i + ": " + intArr[i]); // 홀수는 그대로 출력
 			}
 			
 		}
 		
+//		System.out.println("---------------------");
+//		System.out.println("짝수 인덱스 :");
+//		for(int i=0;i<intArr.length;i+=2) {
+//			System.out.print("인덱스"+ i + ": " + intArr[intArr.length - i - 1] + " "); // 인덱스 짝수는 뒤에서 출력
+//		}
+//		
+//		System.out.println("---------------------");
+//		System.out.println();
+//		System.out.println("홀수 인덱스 :");
+//		for(int i=1;i<intArr.length;i+=2) {
+//			System.out.print("인덱스" + i + ": " + intArr[i] + " "); // 홀수는 그대로 출력
+//			
+//		}
+//		
+//		System.out.println("---------------------");
+//		System.out.println();
+//		System.out.println("전체 인덱스");
+//		for(int i=0;i<intArr.length;i++) {
+//			System.out.print(intArr[i] + " "); // 홀수는 그대로 출력
+//			
+//		}
 		
 		
 		
