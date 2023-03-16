@@ -17,7 +17,7 @@ public class Add {
 		return num1;
 	}
 	public void setNum1(int num1) {
-		this.num1 = num1;
+		this.num1 = num1; //this는 현재 값이다. 그 인스턴스값 num 1 이 각각 instanceㅇ서 제공한 값으로 활용된다.
 	}
 	public int getNum2() {
 		return num2;

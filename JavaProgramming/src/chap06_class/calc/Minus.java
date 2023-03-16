@@ -26,7 +26,7 @@ public class Minus {
 		this.result = result;
 	} 
 	
-	public int Minus() {
+	public int minus() {
 		result = num1 - num2;
 		return result;
 	}

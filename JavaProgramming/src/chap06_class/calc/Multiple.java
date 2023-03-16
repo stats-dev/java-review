@@ -26,7 +26,7 @@ public class Multiple {
 		this.result = result;
 	} 
 	
-	public int Multiple() {
+	public int multiple() {
 		result = num1 * num2;
 		return result;
 	}
