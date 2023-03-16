@@ -1,6 +1,6 @@
 package chap06_class.calc;
 
-public class Minus {
+public class Minus extends Calc { //상속 개념
 
 	private int num1;
 	private int num2;
@@ -26,11 +26,14 @@ public class Minus {
 		this.result = result;
 	} 
 	
-	public int minus() {
+	public int min() {
 		result = num1 - num2;
 		return result;
 	}
 	
+	/*
+	 * // 오버라이딩 public int minus(int a, int b) { return (a * a) - (b * b); }
+	 */
 	
 	
 }

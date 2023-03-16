@@ -27,7 +27,7 @@ public class Divide {
 	} 
 	
 	
-	public int divide() {
+	public int divi() {
 		result = num1 / num2;
 		return result;
 	}
