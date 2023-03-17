@@ -22,7 +22,7 @@ public class _01_basic {
 		// 거꾸로 출력
 		for(int i=0;i<intArr.length;i++) {
 			
-			System.out.println(intArr[9-i]);
+			System.out.print(intArr[9-i] + " ");
 			
 		}
 		
@@ -58,10 +58,10 @@ public class _01_basic {
 		Random rand = new Random();
 		
 		for(int i=0;i<intArr2.length;i++) {
-			intArr2[i] = rand.nextInt(10);	
+			intArr2[i] = rand.nextInt(10) + 1;	
 			if(intArr2[i] % 2 != 0) {
 				System.out.println(intArr2[i]);
-				continue;
+				//continue;
 			}
 		}
 		
