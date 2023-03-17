@@ -65,8 +65,9 @@ public class _01_basic {
 			}
 		}
 		
+		System.out.print("전체 배열 확인: ");
 		for(int i=0;i<intArr2.length;i++) {
-			System.out.print(intArr2[i]);	
+			System.out.print(intArr2[i] + " ");	
 		}
 		
 		System.out.println();
@@ -76,14 +77,25 @@ public class _01_basic {
 //		이 정수중에서 2의 배수와 3의 배수를 출력하세요
 		int[] intArr3 = new int[10];
 		
+		Scanner sc1 = new Scanner(System.in);
+
 		for(int i=0;i<intArr3.length;i++) {
-			intArr3[i] = sc.nextInt();
+			intArr3[i] = sc1.nextInt();
 			
 		}
 		
+		System.out.print("2의 배수: ");
 		for(int i=0;i<intArr3.length;i++) {
-			if(intArr3[i] % 2 == 0 || intArr3[i] % 3 == 0) {
-				System.out.println(intArr3[i]);
+			if(intArr3[i] % 2 == 0) {
+				System.out.print(intArr3[i] + ", ");
+			}
+		}
+		System.out.println();
+		
+		System.out.print("3의 배수: ");
+		for(int i=0;i<intArr3.length;i++) {
+			if(intArr3[i] % 3 == 0) {
+				System.out.print(intArr3[i] + ", ");
 			}
 		}
 		
