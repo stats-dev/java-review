@@ -1,6 +1,5 @@
 package chap06_class.car;
 
-import java.util.Scanner;
 
 public class Car {
 	//제조사(company), 모델(model), 색상(color), 가격(price) : 4개의 멤버변수 public으로 만들기
