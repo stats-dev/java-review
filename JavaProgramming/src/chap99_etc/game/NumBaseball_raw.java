@@ -2,7 +2,7 @@ package chap99_etc.game;
 
 import java.util.Scanner;
 
-public class NumBaseball {
+public class NumBaseball_raw {
 	//게임 룰 : 컴퓨터가 3개의 랜덤값을 가지고 
 	//        사용자가 3개의 숫자를 입력(중복불가능)
 	//		  컴퓨터의 3개의 숫자와 사용자의 3개의 숫자를
@@ -62,27 +62,82 @@ public class NumBaseball {
 	
 	//컴퓨터 랜덤 값 3개 생성해주는 메소드
 	public void generateRandom() {
+		for(int i = 0; i < com.length; i++) {
+			com[i] = (int)(Math.random() * 10);
+			//중복체크
+			//true면 중복, false면 중복안됨
+			if(i > 0) {
+				if(checkDuplicate(com, i)) {
+					i--; //이게 핵심. 다시 줄어들고, 위로 올라가서 i++ 만나서 재실행이 됩니다.
+				}			
+			}
+		}
 		
-		//중복체크
+		
 	}
 	
 	//중복값 체크 메소드
 	public boolean checkDuplicate(int[] arr, int num) {
 		boolean isDuplicated = false;
 		
+		for(int i = 0; i < num; i++) { // i는 num-1까지만 비교가능하며, 현재값과 직전 값만 비교하면 되기 때문이다.
+			//현재 배열에 저장된 값과
+			//현재 배열에 저장된 값의 인덱스 전까지 -1(직전값) 까지의 값들을 비교.
+			if(arr[num] == arr[i]) {
+				isDuplicated = true;
+				//return true
+				
+			}
+		}
 		
 		
-		return false;
+		return isDuplicated;
+		//return false 이렇게 구성해도 된다!!
 	}
 	
 	//유저의 입력값을 받아서 배열에 담아주는 메소드
 	public void getUserInput() {
-		
-		//중복체크
+		for(int i = 0;i<user.length; i++) {
+			user[i] = sc.nextInt();
+			
+			//중복체크
+			if(i>0) {
+				if(checkDuplicate(user, i)) {
+					i--;
+					continue;
+				}
+			}
+			
+		}
+		gameCnt++;
+
 	}
 	
-	//스트라이크 볼 판정하는 메소드
+	//스트라이크 볼 판정하는 메소드 : 중첩 for문으로 풀어야 한다.
 	public boolean judgetStrike() {
+		for(int i =0; i < com.length; i++) {
+			for(int j = 0; j < user.length; j++) {
+				//최소 볼 확보
+				if(com[i]==user[j]) {
+					if(i == j) {
+						//스트라이크 판정
+						strike++;
+					} else {
+						//볼 판정
+						ball++;
+					}
+				}
+			}
+			
+			
+		}
+		
+		System.out.println(strike + "스트라이크, " + ball + "볼");
+		if(strike == 3) {
+			System.out.println(gameCnt + "회만에 맞추셨습니다.");
+			return true;
+		}
+		
 		
 		return false;
 	}
@@ -90,7 +145,24 @@ public class NumBaseball {
 	
 	//재게임 여부
 	public boolean reGame() {
-		return false;
+		boolean isRegame = false;
+		while(true) {
+			System.out.print("다시 게임을 진행하시겠습니까?(1: 재시작, 0: 종료)");
+			int regame = sc.nextInt();
+			
+			if(regame ==1) {
+				gameCnt = 0;
+				isRegame = true;
+				break;
+			} else if(regame == 0) {
+				break;
+			} else {
+				System.out.println("잘못 입력하셨습니다.");
+				continue;
+				
+			}
+		}
+		return isRegame;
 	}
 	
 	
