@@ -27,7 +27,6 @@ public class _02_middle {
 		
 		calcArr[0].calculate();
 		calcArr[1].calculate(); 
-		calcArr[1].calculate(); 
 		calcArr[2].calculate(); 
 		calcArr[3].calculate();
 		
