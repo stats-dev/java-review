@@ -1,0 +1,1 @@
+games.jar가 있는 폴더에서 우클릭 > 더 많은 옵션 표시 >  터미널에서 열기 > java -jar game.jar
