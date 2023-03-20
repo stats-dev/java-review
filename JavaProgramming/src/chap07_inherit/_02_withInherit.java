@@ -26,6 +26,9 @@ public class _02_withInherit {
 		car1.carInfo();
 		car1.speedUp();
 		car1.speedDown();
+		//변수가 부모의 형태이기 때문에,
+		//자식의 기능은 가지고 있지 않다.
+//		car1.openDoor();
 		
 
 		car1 = new HyundaiCarInherit();

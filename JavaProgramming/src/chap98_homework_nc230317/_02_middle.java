@@ -19,22 +19,29 @@ public class _02_middle {
 		calcArr[2] = new Mul();
 		calcArr[3] = new Div();
 		
-		calcArr[0].setValue(4, 3);
-		calcArr[1].setValue(4, 3);
-		calcArr[2].setValue(4, 3);
-		calcArr[3].setValue(4, 3);
-
 		
-		calcArr[0].calculate();
-		calcArr[1].calculate(); 
-		calcArr[2].calculate(); 
-		calcArr[3].calculate();
-		
-		//확
-		System.out.println(calcArr[0].calculate());
-		System.out.println(calcArr[1].calculate());
-		System.out.println(calcArr[2].calculate());
-		System.out.println(calcArr[3].calculate());
+		for(int i=0; i < calcArr.length; i++) {
+			calcArr[i].setValue(20, 10);
+			System.out.println(calcArr[i].calculate());
+		}
+//		
+//		
+//		calcArr[0].setValue(4, 3);
+//		calcArr[1].setValue(4, 3);
+//		calcArr[2].setValue(4, 3);
+//		calcArr[3].setValue(4, 3);
+//
+//		
+//		calcArr[0].calculate();
+//		calcArr[1].calculate(); 
+//		calcArr[2].calculate(); 
+//		calcArr[3].calculate();
+//		
+//		//확
+//		System.out.println(calcArr[0].calculate());
+//		System.out.println(calcArr[1].calculate());
+//		System.out.println(calcArr[2].calculate());
+//		System.out.println(calcArr[3].calculate());
 
 		
 		

@@ -1,15 +1,16 @@
 package chap98_homework_nc230317.calc;
 
+
 public class Sub extends Calc {
-	public int a,b;
-
-	
-	public void setValue(int a, int b) {
-		
-		this.a = a;
-		this.b = b;
-
-	}
+//	public int a,b;
+//
+//	
+//	public void setValue(int a, int b) {
+//		
+//		this.a = a;
+//		this.b = b;
+//
+//	}
 	
 	public int calculate() {
 		

@@ -1,5 +1,6 @@
 package chap98_homework_nc230317.calc;
 
+
 public class Mul extends Calc{
 //	public int a,b;
 //
@@ -9,7 +10,7 @@ public class Mul extends Calc{
 //		this.b = b;
 //
 //	}
-	
+//	
 	public int calculate() {
 		
 		result = a * b;
