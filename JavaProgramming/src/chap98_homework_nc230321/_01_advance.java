@@ -25,9 +25,11 @@ public class _01_advance {
 					+ "		\"4. 전체 정보 출력\"\r\n"
 					+ "		\"5. 월급 계산 출력\"\r\n"
 					+ "		\"6. 프로그램 종료\"");
-			Employee ft = new FullTime();
+			Employee[] ft = new Employee[100];
 			Employee dj = new DayJob();
 			Employee pt = new PartTime();
+			
+			
 			
 			switch(menu) {
 			case 1: {

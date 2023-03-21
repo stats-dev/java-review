@@ -19,7 +19,7 @@ public class ArrayUtility2_test {
 		System.out.println("remove 시작!");
 		int[] test2 = au.remove(s1, s2);
 		
-		for(int i=0;i<test.length;i++) {
+		for(int i=0;i<test2.length;i++) {
 			System.out.println(test2[i]);
 		}
 
