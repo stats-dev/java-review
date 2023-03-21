@@ -9,8 +9,8 @@ public interface Building {
 	
 	//메소드는 자동으로 추상화됨
 	void build(); 
-	void turnOnAircon();
-	int getParkingPrice();
+	void turnOnAircon(); // 에어컨
+	int getParkingPrice(int time); //주차비
 	
 	
 }
