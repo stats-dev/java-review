@@ -25,6 +25,7 @@ public class ArrayUtility2 {
 	public static int[] remove(int[] s1, int[] s2) {
 		int[] s3 = new int[s1.length];
 		int sum = s1.length;
+		//int[] indexArr = 
 		
 		for(int i=0;i<s1.length;i++) {
 			for(int j=0;j<s1.length;j++) {
