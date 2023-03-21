@@ -1,5 +1,7 @@
 package chap98_homework_nc230320;
 
+import java.util.Arrays;
+
 public class ArrayUtility2 {
 
 //2. 다음 두 개의 static 가진 ArrayUtility2클래스를 만들어보고 사용하세요
@@ -20,19 +22,49 @@ public class ArrayUtility2 {
 		
 	}
 	
-	public static int[] remove(int[] s4, int[] s5) {
-		int[] s6 = new int[s4.length];
+	public static int[] remove(int[] s1, int[] s2) {
+		int[] s3 = new int[s1.length];
+		int sum = 0;
 		
-		for(int i=0;i<s4.length;i++) {
-			for(int j=0;j<s5.length;j++) {
-				if(s4[i] == s5[j]) {
+		for(int i=0;i<s1.length;i++) {
+			for(int j=0;j<s1.length;j++) {
+				if(s1[i] == s2[j]) {
+					sum++;
 					break;
 				} else {
-					s6[i] = s4[i];	
+					s3[i] = s1[i];	
 				}
 			}
 		}
-		return s6;
+		
+		int[] s4 = new int[sum];
+		
+		for(int i=0;i<s1.length;i++) {
+			for(int j=0;j<s1.length;j++) {
+				if(s1[i] == s2[j]) {
+					sum++;
+					break;
+				} else {
+					s3[i] = s1[i];	
+				}
+			}
+		}
+		
+		
+//		int[] result = Arrays.stream(s3)
+//				.boxed()
+//				.filter((a)->((a!=0)))
+//						.sorted()
+//						.mapToInt(Integer::intValue)
+//						.toArray()
+//						;
+//		
+//		System.out.println(Arrays.toString(s3));
+//		
+				
+		
+		
+		return s3;
 			
 		
 	}

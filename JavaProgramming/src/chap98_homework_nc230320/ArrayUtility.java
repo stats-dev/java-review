@@ -6,7 +6,7 @@ public class ArrayUtility {
 		double[] convertArr = new double[source.length];
 
 		for(int i =0;i<source.length;i++) {
-			convertArr[i] = (int) source[i];
+			convertArr[i] = (double) source[i];
 //			System.out.println(convertArr[i]);
 
 		}
