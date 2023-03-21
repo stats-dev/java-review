@@ -24,31 +24,40 @@ public class ArrayUtility2 {
 	
 	public static int[] remove(int[] s1, int[] s2) {
 		int[] s3 = new int[s1.length];
-		int sum = 0;
+		int sum = s1.length;
 		
 		for(int i=0;i<s1.length;i++) {
 			for(int j=0;j<s1.length;j++) {
 				if(s1[i] == s2[j]) {
-					sum++;
+					sum--;
 					break;
 				} else {
 					s3[i] = s1[i];	
 				}
 			}
 		}
+		//System.out.println(sum);
 		
 		int[] s4 = new int[sum];
 		
-		for(int i=0;i<s1.length;i++) {
-			for(int j=0;j<s1.length;j++) {
-				if(s1[i] == s2[j]) {
-					sum++;
-					break;
-				} else {
-					s3[i] = s1[i];	
-				}
-			}
-		}
+		for(int i=0;i<sum;i++){
+    	  s4[i]=s3[i];
+      }
+	      return s4;
+	}
+	
+
+		
+//		for(int i=0;i<s1.length;i++) {
+//			for(int j=0;j<s1.length;j++) {
+//				if(s1[i] == s2[j]) {
+//					sum++;
+//					break;
+//				} else {
+//					s3[i] = s1[i];	
+//				}
+//			}
+//		}
 		
 		
 //		int[] result = Arrays.stream(s3)
@@ -62,12 +71,12 @@ public class ArrayUtility2 {
 //		System.out.println(Arrays.toString(s3));
 //		
 				
-		
-		
-		return s3;
-			
-		
-	}
+//		
+//		
+//		return s3;
+//			
+//		
+//	}
 
 	
 	

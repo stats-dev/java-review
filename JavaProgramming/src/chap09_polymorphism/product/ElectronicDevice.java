@@ -5,6 +5,8 @@ public class ElectronicDevice {
 		System.out.println("전원을 켭니다.");
 	}
 	
+	//public abstract void powerOn(int spring);
+	
 	public void powerOff() {
 		System.out.println("전원을 끕니다.");
 	}
