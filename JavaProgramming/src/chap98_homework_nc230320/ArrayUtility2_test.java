@@ -7,7 +7,7 @@ public class ArrayUtility2_test {
 		
 		ArrayUtility2 au = new ArrayUtility2();
 		
-		int[] s1 = {1,2,3,4};
+		int[] s1 = {1,2,3,4,6};
 		int[] s2 = {3,4,5,6};
 		
 		int[] test = au.concat(s1, s2);

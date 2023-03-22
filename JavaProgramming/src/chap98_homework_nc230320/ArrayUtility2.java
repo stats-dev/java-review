@@ -42,7 +42,7 @@ public class ArrayUtility2 {
 		int[] s4 = new int[sum];
 		
 		for(int i=0;i<sum;i++){
-    	  s4[i]=s1[i];
+    	  s4[i] = s3[i];
       }
 	      return s4;
 	}
