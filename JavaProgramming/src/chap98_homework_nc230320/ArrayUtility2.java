@@ -37,14 +37,18 @@ public class ArrayUtility2 {
 				}
 			}
 		}
-		//System.out.println(sum);
+		System.out.println(sum);
 		
 		int[] s4 = new int[sum];
 		
 		for(int i=0;i<sum;i++){
+<<<<<<< HEAD
     	  s4[i] = s3[i];
+=======
+    	  s4[i]=s3[i];
+>>>>>>> 5d648f7d6a5479a98f970f1721867a8766f55208
       }
-	      return s4;
+	   return s4;
 	}
 	
 
