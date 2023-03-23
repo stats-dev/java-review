@@ -2,10 +2,10 @@ package chap98_homework.nc230320;
 
 import java.util.Scanner;
 
-import chap98_homework_nc230320.games.GamesClass;
-import chap98_homework_nc230320.games.Lotto;
-import chap98_homework_nc230320.games.NumBaseball;
-import chap98_homework_nc230320.games.RockScissPaper;
+import chap98_homework.nc230320.games.GamesClass;
+import chap98_homework.nc230320.games.Lotto;
+import chap98_homework.nc230320.games.NumBaseball;
+import chap98_homework.nc230320.games.RockScissPaper;
 
 
 public class GameLauncher {
@@ -35,7 +35,6 @@ public class GameLauncher {
 					break;
 				case 2:
 					gc = new NumBaseball();
-					gc.start();
 					break;
 				case 3: 
 					gc = new Lotto();

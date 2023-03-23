@@ -42,11 +42,8 @@ public class ArrayUtility2 {
 		int[] s4 = new int[sum];
 		
 		for(int i=0;i<sum;i++){
-<<<<<<< HEAD
     	  s4[i]=s3[i];
-=======
-    	  s4[i] = s3[i];
->>>>>>> c8a2ac4886128f7a9b8491ba1091ea9a8fce9d58
+
       }
 	   return s4;
 	}
