@@ -23,12 +23,14 @@ public class _02_middle {
 		}
 		
 		System.out.println(input.toString());
+//		System.out.println(input.capacity());
 
 		
 //		2. "유용한 클래스는 많다. 다양한 라이브러리를 활용한다."라는 문자열이 있을때
 //	     사용자가 정수를 입력하고 문자열을 거꾸로 만든 문자열의 정수 인덱스의 문자를 출력하세요.
 		
 		StringBuffer input1 = new StringBuffer("유용한 클래스는 많다. 다양한 라이브러리를 활용한다.");
+		
 		
 		//사용자 정수 입력
 		Scanner sc = new Scanner(System.in);
@@ -47,27 +49,21 @@ public class _02_middle {
 //		   금리는 연 10%입니다
 //		   복리이자로 계산했을 때 10년후 얼마가 될까요?
 		
-//		보통 복리 공식은 P x (1 + r/n)nt 입니다. P 는 최초 투자 금액, r 은 이자율, n 은 이자 발생 기간, t 는 연 단위 전체 투자 기간입
 		
-		BigInteger bint1 = new BigInteger("10000");
-		BigInteger rate = BigInteger.valueOf((long) 1.1);
-//		double rate1 = rate.doubleValue();
-//		double rate = 1.1;
+		int money = 10000;
+		double rate = 1.1;
 
-//		BigInteger year = BigInteger.valueOf(10);
 		int year = 10;
 		
-//		int money = bint1.intValue();
-		BigInteger result = bint1.multiply(rate.pow(2));
+		double result = money * (Math.pow(rate,year));
 		
-				
-//		result = bint1.multiply(result); 
-		
-		System.out.println(result.intValue());
+						
+		System.out.println(result);
 		
 		
 
 //		4. 재귀메소드를 이용해 사용자가 입력한 숫자까지의 합을 구하시오.
+		
 //		static BigInteger factorial(BigInteger n) { // 매개변수로 BigInteger를 받는 멋진 함수이다.
 //			if(n.intValue() == 0) {
 //				return BigInteger.ONE;

@@ -43,6 +43,7 @@ public class _01_basic {
 		for(int i=5;i<=30;i++) {
 			sb.insert(i, "a");
 		}
+		
 		System.out.println(sb.toString());
 	
 
@@ -61,6 +62,7 @@ public class _01_basic {
 		
 		double result =	Double.parseDouble("145.987") + Double.parseDouble("-563.11");
 		System.out.println(result); 
+		System.out.printf("%f",result);
 		
 		
 
