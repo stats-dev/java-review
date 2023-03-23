@@ -43,10 +43,15 @@ public class ArrayUtility2 {
 		
 		for(int i=0;i<sum;i++){
 <<<<<<< HEAD
+<<<<<<< HEAD
     	  s4[i] = s3[i];
 =======
     	  s4[i]=s3[i];
 >>>>>>> 5d648f7d6a5479a98f970f1721867a8766f55208
+=======
+    	  s4[i]=s3[i];
+
+>>>>>>> b349bef2641bc23435d55136628d0a6e56c9ed69
       }
 	   return s4;
 	}
