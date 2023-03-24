@@ -151,10 +151,10 @@ public class PrintStRank {
 			//성적이 높은 사람이 앞으로 성적이 낮은 사람이 뒤로
 			for(int i = 0; i < stArr.length; i++) {
 				for(int j = 0; j < i; j++) {
-					if(i > 0 && stArr[i].getAvg() > mstArr[j].getAvg()) {
-						MathStudent temp = stArr[i];
+					if(i > 0 && stArr[i].getAvg() > stArr[j].getAvg()) {
+//						MathStudent temp = stArr[i];
 						stArr[i] = stArr[j];
-						stArr[j] = temp;
+//						stArr[j] = temp;
 					}
 				}
 			}
