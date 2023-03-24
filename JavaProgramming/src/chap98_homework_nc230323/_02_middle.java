@@ -10,12 +10,15 @@ public class _02_middle {
 //		1. 크기가 30인 StringBuffer에 "hello"라는 문자열이 담겨있다.
 //	    비어있는 바이트의 공간을 b, i, t가 반복되어 들어가도록 모두 채우세요.
 		
-		StringBuffer input = new StringBuffer();
+		StringBuffer input = new StringBuffer(30);
 		input.append("hello");
-		input.setLength(30);
+//		input.setLength(30);
+		
+		int len = input.capacity() - input.length();
+
 //		System.out.println(input.length()-2);;
 //		System.out.println(input.length());
-		for(int i=5;i<30-2;i+=3) {
+		for(int i=5;i<len;i+=3) {
 //			System.out.println(i);
 			input.insert(i, "b");
 			input.insert(i+1, "i");
