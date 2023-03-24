@@ -24,7 +24,7 @@ public class _20_calDateCasting {
 							" " + cal2.get(Calendar.HOUR_OF_DAY) +
 							":" + cal2.get(Calendar.MINUTE) +
 							":" + cal2.get(Calendar.SECOND) +
-							" " + cal2.get(Calendar.YEAR));
+							" *" + cal2.get(Calendar.YEAR));
 		
 		
 	}
