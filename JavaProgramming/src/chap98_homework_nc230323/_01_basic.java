@@ -60,9 +60,13 @@ public class _01_basic {
 //4. 문자열 "145.987", "-563.11" 을 double형으로 변경하여
 //     덧셈의 결과를 출력하세요.
 		
-		double result =	Double.parseDouble("145.987") + Double.parseDouble("-563.11");
+		double result =	(double)Math.round(Double.parseDouble("145.987") + Double.parseDouble("-563.11"));
 		System.out.println(result); 
-		System.out.printf("%f",result);
+//		System.out.printf("%f",result);
+		
+		System.out.println((double)Math.round(
+				(Double.parseDouble("145.987") 
+				+ Double.parseDouble("-563.11")) * 1000) / 1000); // 
 		
 		
 
