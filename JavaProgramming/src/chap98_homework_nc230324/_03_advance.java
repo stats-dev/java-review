@@ -90,6 +90,8 @@ public class _03_advance {
 			System.out.println(sdf1.format(d4));
 		}
 		
+		sc.close();
+		
 		
 	}
 	

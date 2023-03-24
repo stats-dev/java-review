@@ -34,6 +34,12 @@ public class _01_basic {
 		SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
 		d1 = new Date(cal1.getTimeInMillis());
 		System.out.println(sdf1.format(d1));
+		
+		SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
+		System.out.println(sdf2.format(d1));
+
+		
+		
 
 		
 	}

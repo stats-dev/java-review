@@ -16,7 +16,7 @@ public class _02_middle {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("날짜를 입력하세요.(yyyy-MM-dd 형식)");
-		String dates = sc.next(); 
+		String dates = sc.next();
 
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
