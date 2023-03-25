@@ -36,18 +36,41 @@ public class _03_advance {
 		
 //		Scanner sc = new Scanner(System.in);
 		
-		StringBuilder sb1 = new StringBuilder();
-		sb1.append("aabbcdeffaaaaynguuuuuu"); // 8글자
-		int len = sb1.capacity() - sb1.length();
-		for(int i =0; i<len;i++) {
-			if(sb1.charAt(i) == sb1.charAt(i+1)) {
-				sb1.delete(i,i+1);
-			} else {
-				continue;
-			}
-		}
+//		StringBuilder sb1 = new StringBuilder();
+//		sb1.append("aabbcdeffaaaaynguuuuuu"); // 8글자
+//		int len = sb1.capacity() - sb1.length();
+//		for(int i =0; i<len;i++) {
+//			if(sb1.charAt(i) == sb1.charAt(i+1)) {
+//				sb1.delete(i,i+1);
+//			} else {
+//				continue;
+//			}
+//		}
+//		
+//		System.out.println(sb1);
 		
-		System.out.println(sb1);
+
+		
+		        Scanner scanner = new Scanner(System.in);
+		        System.out.print("Enter a string: ");
+		        String str = scanner.nextLine();
+
+		        StringBuilder sb = new StringBuilder(str);
+		        char prev = 0; // 이전 문자를 저장하기 위한 변수
+		        int i = 0;
+
+		        while (i < sb.length()) {
+		            char current = sb.charAt(i);
+		            if (current == prev) {
+		                sb.deleteCharAt(i);
+		            } else {
+		                prev = current;
+		                i++;
+		            }
+		        }
+
+		        System.out.println("Result: " + sb.toString());
+		
 		
 //		sb1.append(sc.next());
 		
@@ -84,7 +107,7 @@ public class _03_advance {
 		Date d3 = new Date(cal1.getTimeInMillis());
 		System.out.println(sdf1.format(d3));
 		
-		for(int i = 0;i<date;i++) {
+		for(int j = 0;j<date;j++) {
 			cal1.add(Calendar.DATE, 1);
 			Date d4 = new Date(cal1.getTimeInMillis());
 			System.out.println(sdf1.format(d4));
