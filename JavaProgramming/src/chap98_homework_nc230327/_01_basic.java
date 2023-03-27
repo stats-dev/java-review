@@ -41,9 +41,16 @@ public class _01_basic {
 //		3. Map<String, Integer>을 하나 생성하여 key는 알파벳(대소문자 구분) value는 해당 알파벳의 유니코드 값을 Integer형태로 저장하세요.
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		
+		//소문자 
+		for(int i = 65; i <= 90; i++) {
+			char input = (char) i;
+			map.put(Character.toString(input), i);
+		}
 		
-		for(int i = 65; i < 70; i++) {
-			map.put("Key " + (char) i, i);
+		//대문자 
+		for(int i = 97; i <= 122; i++) {
+			char input = (char) i;
+			map.put(Character.toString(input), i);
 		}
 		
 		System.out.println(map);
