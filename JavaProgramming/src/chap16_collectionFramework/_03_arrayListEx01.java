@@ -1,5 +1,7 @@
-package chap98_homework.nc230321;
+package chap16_collectionFramework;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import chap98_homework.nc230321.employee.ContractEmployee;
@@ -7,15 +9,20 @@ import chap98_homework.nc230321.employee.Employee;
 import chap98_homework.nc230321.employee.RegularEmployee;
 import chap98_homework.nc230321.employee.TempEmployee;
 
-public class _03_advance {
+public class _03_arrayListEx01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Employee[] ep = new Employee[100];
+		//ArrayList<Employee> 생성
+		//사용자가 1. 정규직, 2.계약직, 3.임시직
+		//각각 직원의 정보를 입력
+		//그 정보를 ArrayList에 저장
+		//출력
+		
 		Scanner sc = new Scanner(System.in);
 		
-//		ArrayList<>
-		
+		List<Employee> epList = 
+				new ArrayList<Employee>();
 		
 		int eno = 0;
 		String name = "";
@@ -47,8 +54,8 @@ public class _03_advance {
 						pay = sc.nextInt();
 						System.out.println("보너스를 입력하세요.");
 						bonus = sc.nextInt();
-						ep[eno] = new RegularEmployee(eno, name, pay, 1, bonus);
-						ep[eno].showEmployeeInfo();
+						epList.add(new RegularEmployee(eno, name, pay, 1, bonus));
+						epList.get(epList.size() - 1).showEmployeeInfo();
 						System.out.println("----------------");
 						break;
 					case 2 : 
@@ -62,8 +69,8 @@ public class _03_advance {
 						pay = sc.nextInt();
 						System.out.println("근무년수를 입력하세요.");
 						hireYear = sc.nextInt();
-						ep[eno] = new TempEmployee(eno, name, pay, 2, hireYear);
-						ep[eno].showEmployeeInfo();
+						epList.add(new TempEmployee(eno, name, pay, 2, hireYear));
+						epList.get(epList.size() - 1).showEmployeeInfo();
 						System.out.println("----------------");
 						break;
 					case 3 : 
@@ -77,22 +84,36 @@ public class _03_advance {
 						pay = sc.nextInt();
 						System.out.println("근무일수를 입력하세요.");
 						workDay = sc.nextInt();
-						ep[eno] = new ContractEmployee(eno, name, pay, 3, workDay);
-						ep[eno].showEmployeeInfo();
+						epList.add(new ContractEmployee(eno, name, pay, 3, workDay));
+						epList.get(epList.size() - 1).showEmployeeInfo();
 						System.out.println("----------------");
 						break;
 					case 4 : 
-						for(int i = 0; i < ep.length; i++) {
-							if(ep[i] != null) {
-								ep[i].showEmployeeInfo();
-								System.out.println("----------------");
-							}
+//						for(int i = 0; i < epList.size(); i++) {
+//							epList.get(i).showEmployeeInfo();
+//							System.out.println("----------------");
+//						}
+						
+						for(Employee ep : epList) {
+							ep.showEmployeeInfo();
+							System.out.println("----------------");
 						}
 						break;
 					case 5 : 
 						System.out.print("검색할 사원의 사번을 입력하세요.");
 						eno = sc.nextInt();
-						ep[eno].showEmployeeInfo();
+//						for(int i = 0; i < epList.size(); i++) {
+//							if(epList.get(i).getEno() == eno) {
+//								epList.get(i).showEmployeeInfo();
+//							}
+//						}
+						
+						for(Employee ep : epList) {
+							if(ep.getEno() == eno) {
+								ep.showEmployeeInfo();
+							}
+						}
+						
 						System.out.println("----------------");
 						break;
 					case 6 : 

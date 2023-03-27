@@ -2,6 +2,7 @@ package chap98_homework_nc230324;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
@@ -13,7 +14,12 @@ public class _03_advance {
 //		1. 2001년 12월 19일이 결혼기념일인 부부가 있다. 
 //	    윤년이 있는 년도에는 결혼기념일의 날짜를 하루 씩 더하기로 했다.
 //	    2022년의 결혼기념일 날짜를 구하세요.
-		
+//		List<Integer> list
+//		ArrayList<E>
+//		Map<String, Integer> map = new HashMap();
+//		Set<Integer> set = new HashSet;
+//		Map<Integer> 
+				
 		Calendar cal = Calendar.getInstance();
 		cal.set(2001, 12-1, 19);
 				

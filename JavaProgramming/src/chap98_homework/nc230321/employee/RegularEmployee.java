@@ -3,8 +3,8 @@ package chap98_homework.nc230321.employee;
 public class RegularEmployee extends Employee {
 	private int bonus;
 
-	public RegularEmployee(int eno, String name, int pay, int bonus) {
-		super(eno, name, pay);
+	public RegularEmployee(int eno, String name, int pay, int type, int bonus) {
+		super(eno, name, pay, type);
 		this.bonus = bonus;
 	}
 

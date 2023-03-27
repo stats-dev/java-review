@@ -4,11 +4,13 @@ public abstract class Employee {
 	private int eno;
 	private String name;
 	private int pay;
+	private int type; //1.정규직, 2.계약직, 3.임시직
 	
-	public Employee(int eno, String name, int pay) {
+	public Employee(int eno, String name, int pay, int type) {
 		this.eno = eno;
 		this.name = name;
 		this.pay = pay;
+		this.type = type;
 	}
 	
 	public int getEno() {
