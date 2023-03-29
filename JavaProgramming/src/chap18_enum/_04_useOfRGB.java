@@ -1,6 +1,6 @@
 package chap18_enum;
 
-import chap18_enum.enums.Calculator;
+
 import chap18_enum.enums.RGB;
 import chap18_enum.enums.Season_KHH;
 

@@ -6,6 +6,7 @@ public enum Calculator {
 			return a + b;
 		}
 		
+		
 	}, MINUS("-") {
 			public int calculate(int a, int b) { //이렇게 직접 넣을 수 있다. 기능 넣기.
 				return a - b;
