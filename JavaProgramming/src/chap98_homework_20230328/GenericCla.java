@@ -81,7 +81,7 @@ public class GenericCla<T> {
 	
 	public static <K,V> void printOverTen(Map<K, V> map) {
 		
-		int index = 0;
+//		int index = 0;
 		
 		for(Entry<K, V> ent : map.entrySet()) {
 			if(ent.getValue().toString().length() >= 10) {
