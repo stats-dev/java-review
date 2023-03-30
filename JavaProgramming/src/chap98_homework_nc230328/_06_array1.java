@@ -15,7 +15,6 @@ public class _06_array1 {
 		for(int i=0;i<iArr1.length;i++) {
 			System.out.println(iArr1[i]);
 		}
-		
 	
 	}
 
