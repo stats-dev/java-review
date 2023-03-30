@@ -10,13 +10,28 @@ public class _06_array8 {
 //		    가장 길이가 긴 문자열의 인덱스와 그 문자열을 출력하세요.
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("문자열을 입력하세요.");
+		System.out.println("문자열을 입력하세요. (-기준으로 구분)");
 		
-		String[] str = new String[5];
+		String input = sc.nextLine();
+		String[] str = input.split("-");
+		
+		int maxIndex = 0;
+		int maxLen = str[0].length();
+		
+		// 문자열 배열을 만들고, 이걸 반복해서 확인
 		for(int i = 0; i < str.length; i++) {
-			str[i] = sc.next();
-			str[i] = str[i]+"-";
+			if(maxLen > str[i].length()) {
+				continue;
+			} else {
+				maxLen = str[i].length();
+				maxIndex = i;				
+			}
 		}
+		
+		System.out.println("가장 길이가 긴 문자열의 인덱스: " + maxIndex + " 그 문자열은 " + str[maxIndex] + "입니다.");
+
+		
+		
 
 		
 		
