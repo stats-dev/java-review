@@ -13,16 +13,18 @@ public class _06_array4 {
 			if((i+1) % 2 == 0) {
 				iArr[i] = i+1;
 				sum += iArr[i];
-			}
+			
 		}
 		
 //		for(int i = 0 ; i < iArr.length; i++) {
 //			System.out.println(iArr[i]);
 //		}
 		
-		System.out.println(sum);
 		
 		
 	}
+		System.out.println(sum);
 
+
+}
 }
