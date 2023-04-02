@@ -47,19 +47,7 @@ public class _09_collection7 {
 		}
 		System.out.println(carMapList);
 		
-//		int maxVal = 0;
-//		String maxName = null; 
-//		while(it.hasNext()) {
-//			Entry<String, Integer> ent = it.next();
-//			if(ent.getValue() > maxVal) {
-//				maxName = ent.getKey();
-//				maxVal = ent.getValue();
-//			}
-//		}
-//		
-//		System.out.println(maxName + maxVal);
-//		
-//		
+
 
 		
 		
