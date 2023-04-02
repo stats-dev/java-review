@@ -33,19 +33,25 @@ public class _09_collection7 {
 		carMapList.add(hyundaiCar);
 		carMapList.add(kiaCar);
 		
-		Set<Entry<String, Integer>> carSet = new HashSet<Entry<String, Integer>>();
-		Iterator<Entry<String, Integer>> it = carSet.iterator();
+		List<Entry<String, Integer>> entList = new ArrayList<Entry<String, Integer>>();
 		
-		String maxCar = null;
-		int maxVal = 0;
-		
-
-		while(it.hasNext()) {
-			Entry<String, Integer> ent = it.next();
-			System.out.println(ent.getKey());
+		for(int i =0;i<carMapList.size();i++) {
+			Map<String, Integer> map = carMapList.get(i);
 			
+			int max = 0;
+			Entry<String, Integer> maxEnt = null;
+			
+			for(Entry<String, Integer> ent : map.entrySet()) {
+				if(ent.getValue() > max) {
+					max = ent.getValue();
+					maxEnt = ent;
+				}
+			}
+			
+			entList.add(maxEnt);
 		}
-		System.out.println(carMapList);
+		
+		System.out.println(entList);
 		
 
 
