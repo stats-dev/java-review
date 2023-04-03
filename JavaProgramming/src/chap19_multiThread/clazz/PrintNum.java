@@ -20,7 +20,7 @@ public class PrintNum {
 					if(flag > 0) {
 						System.out.println(i);
 					} else {
-						Thread.yield(); //바로 실행되지 못하게 flag, yield로 일단 막아둔다.
+						Thread.yield();
 						i--;
 					}
 				}
@@ -37,14 +37,17 @@ public class PrintNum {
 			}
 		};
 		
-		t1.start();
+//		t1.start();
 		t2.start();
 		
 		try {
-			t1.join();
-			System.out.println("메인스레드 일시 정지"); // 이것도 메인스레드로 모두 마무리된 후에야 실행됨.
-			t2.join();
-			System.out.println("t1스레드 일시 정지"); // 이것도 메인스레드로 모두 마무리된 후에야 실행됨.
+//			t1.join();
+//			System.out.println("메인스레드 일시 정지");
+//			t2.join();
+//			System.out.println("t1스레드 일시 정지");
+			t2.join(); // 메인스레드가 일시정지
+			t1.start(); // 위에서 메인스레드가 일시정지돼서 t2가 종료될 때까지는 실행되지 않음.
+			//요러면 flag 없이도 잘 활용해볼 수 있음.
 		} catch(InterruptedException ie) {
 			System.out.println(ie.getMessage());
 		}
