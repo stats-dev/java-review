@@ -27,14 +27,12 @@ public class _01_useOfThread {
 		});
 
 //		Thread t1 = new Thread();
-		
-		//2. 스레드의 실행
+		//실행이 아니라 실행 대기 큐에 넣어주는 것임.
 		thread.start();
-//		t1.start(); // 이렇게 위에다가 추가하면 멀티스레드 가능.
 		
 		
 		for(int i = 6; i <= 10; i++) {
-			System.out.println("서브 스레드2 실행 : " + i);
+			System.out.println("메인" + i);
 			
 			try {
 				//현재 실행되는 스레드 중지 0.5초동안
