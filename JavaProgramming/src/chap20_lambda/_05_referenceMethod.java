@@ -7,9 +7,11 @@ public class _05_referenceMethod {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//static 메소드는 클래스 원형에서 바로 참조
 		action(MoneyConvertor :: convert); //static이니까 호출이 가능하다!
 		
 		//이번에는 인스턴스를 참조해서 만들 수 있습니다.
+		//일반 메소드는 객체 생성 후 참조
 		MoneyConvertor mcv = new MoneyConvertor();
 		action(mcv :: instanceConvert);
 
