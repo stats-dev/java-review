@@ -1,6 +1,5 @@
 package chap98_homework.nc230315;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
