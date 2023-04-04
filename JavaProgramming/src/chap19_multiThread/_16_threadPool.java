@@ -1,6 +1,5 @@
 package chap19_multiThread;
 
-import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -9,18 +8,12 @@ public class _16_threadPool {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ExecutorService es = 
-				Executors.newFixedThreadPool(5);
+					Executors.newFixedThreadPool(5);
 		
 		//Thread-0
 		PrintThread t1 = new PrintThread();
 		t1.settName(t1.getName());
-		
-		//스레드를 5개까지 가지는 풀
-		//execute(스레드) : 스레드를 풀에 저장
-		//				(새로 생성 혹은 풀에 있는 스레드를 이용해서)
-		// 0~4: 5개 저장
-		// 5가 들어오면 1~5 5개 저장
-		// 0~9: 스레드를 각각 1회씩 실행
+		//exetuce() : 해당 스레드를 풀에 등록하면서 start()도 호출
 		es.execute(t1);
 		
 		try {
@@ -30,21 +23,30 @@ public class _16_threadPool {
 			e.printStackTrace();
 		}
 		
+		//스레드 풀의 스레드들은 데몬 스레드가 아니어서 메인 스레드가 종료되도
+		//계속 남아서 작업을 진행한다. 이러한 문제를 방지하고자 메인 스레드가
+		//종료되기 전에 shutdown()이나 shutdownNow()이용해서
+		//스레드 풀을 종료시킨 다음 메인 스레드가 종료되도록 한다.
 		es.shutdownNow();
 		//PrintThread t2 = new PrintThread();
 		
 		//t2.settName("스레드 2번");
 		
-//		for(int i = 0; i < 10; i++) {
-//			t1.settName(t1.getName());
-//			es.execute(t1);
-//			//es.execute(t2);
-//			
-//			if(i == 9) {
-//				es.shutdownNow();
-//				return;
-//			}
-//		}
+		//for(int i = 0; i < 10; i++) {
+		//	t1.settName(t1.getName() + i);
+			//
+			//t1.start();
+			//스레드를 5개까지 가지는 풀
+			//excute(스레드) : 스레드를 풀에 저장
+			//         (새로 생성 또는 풀에 있는 스레드를 이용해서)
+			// 0~4: 5개 저장
+			// 5가 들어오면 1~5 5개 저장
+			// 0~9: 스레드를 각 각 1회씩 실행
+		//	System.out.println(i);
+		//	es.execute(t1);
+			
+			//es.execute(t2);
+		//}
 //		List<Runnable> rList = 
 //					es.shutdownNow();
 //		
@@ -68,11 +70,11 @@ class PrintThread extends Thread {
 
 	@Override
 	public void run() {
-		while(true) { //무한루프 돌때, 
-		System.out.println(tName + " 작업 진행");
+		while(true) {
+			System.out.println(tName + " 작업 진행");
 		
 			try {
-				Thread.sleep(100); // 100ms 마다 작성하다가, catch에서 리턴메소드로 마무리하면 된다.
+				Thread.sleep(100); // 0.1초마다 작업 진행 후, exception 만나서 호출.
 			} catch(InterruptedException ie) {
 				System.out.println(tName + 
 						" shutdownNow() 호출");
