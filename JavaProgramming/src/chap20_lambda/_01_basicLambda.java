@@ -20,6 +20,19 @@ public class _01_basicLambda {
 			int result = a - b;
 			System.out.println(result);
 		});
+		
+		
+		action(
+		new Calculator() {
+
+			@Override
+			public void calculate(int a, int b) {
+				// TODO Auto-generated method stub
+				
+			}
+//Consumer	
+		});
+		
 	}
 	
 	public static void action(Calculator calc) {
