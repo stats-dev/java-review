@@ -3,7 +3,7 @@ package chap21_stream;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
-public class _05_arrayToStream {
+public class _05_arrayToStream2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -12,7 +12,7 @@ public class _05_arrayToStream {
 		for(int i = 0; i < 10; i++) {
 			intArr[i] = (int)(Math.random() * 10) + 1;
 //			System.out.print(intArr[i] >= 5 ? intArr[i]+ ", " : null);
-			System.out.print(intArr[i] + ", ");
+//			System.out.print(intArr[i] + ", ");
 		}
 		
 		
@@ -21,22 +21,26 @@ public class _05_arrayToStream {
 		
 
 //		//5이상인 값들만 스트림으로 만들기
-//		
-//		IntStream test = intStream.filter(c -> c >= 5);
-
+		IntStream fiveStream = 
+				intStream.filter(a -> a >= 5);
 
 		//* 4 새로운 스트림 만들기
-//		IntStream testNew = test.map(c -> {
-//			c = c * 4;
-//			return c;
-//		});
-//		
-//		testNew.forEach(c -> System.out.println(c));
 
+		IntStream fourStream =
+				fiveStream.map(num -> {
+					int result = 0;
+					result = num * 4;
+					return result;
+				});
 		
-		//체이닝 기법
-		IntStream.of(intArr).filter(c -> c >= 5).map(c -> c * 4).forEach(c -> System.out.println(c));
-//		Arrays.stream(intArr).filter(c -> c >= 5).map(c -> c * 4).forEach(c -> System.out.println(c));
+
+		fourStream.forEach(s -> System.out.println(s));
+		
+//		//체이닝 기법
+//		Arrays.stream(intArr)
+//			  .filter(num -> num >= 5)
+//			  .map(num -> num * 4)
+//			  .forEach(num -> System.out.print(num + ", "));
 		
 	}
 
