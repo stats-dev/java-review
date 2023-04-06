@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 import chap98_homework_nc230406.clazz.HistoricPerson;
 
-public class _01_stream2 {
+public class _01_stream5 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -31,7 +31,7 @@ public class _01_stream2 {
 		
 		Stream<HistoricPerson> hsStream = hsList.stream();
 		
-		hsStream.filter(c -> c.getAchievement().equals("한글")).forEach(c -> System.out.println(c));
+//		hsStream.distinct().forEach(c -> System.out.println(c));
 		
 //		3. 2번에서 만든 List를 스트림으로 변환하고 성이 '이'씨인 인물만 갖는 스트림을 만들고 출력하세요.
 //
@@ -40,8 +40,11 @@ public class _01_stream2 {
 //		4. HistoricPerson에 getSameCountryPerson(String country)를 만들고
 //		    2번에서 만든 List를 스트림으로 변환하고 사용자가 입력한 국가의 인물들만 모은 스트림으로 만들어서 출력하세요. 
 //
+//		hsStream.map(c -> c.getSameCountryPerson("대한민국")).forEach(c -> System.out.println(c));
+		
 //		5. 2번에서 만든 List를 스트림으로 변환하고 성이 두자 이상인 인물의 정보를 스트림으로 만들어서 출력하세요.(을지문덕, 제갈공명)
 
+		hsStream.filter(c -> c.getName().length() >= 4).forEach(c -> System.out.println(c));
 
 	}
 

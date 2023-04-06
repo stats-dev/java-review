@@ -20,9 +20,13 @@ public class _01_stream {
 			strList.add(sc.nextLine());
 		}
 		
-		Stream<String> strStream = strList.stream();
-		strStream.filter(c -> c.length() >= 5)
-				 .forEach(str -> System.out.println(str));
+//		Stream<String> strStream = strList.stream();
+//		strStream.filter(c -> c.length() >= 5)
+//				 .forEach(str -> System.out.println(str));
+//		
+		strList.stream()
+						.filter(c -> c.length() >= 5)
+						.forEach(str -> System.out.println(str));
 		
 
 
