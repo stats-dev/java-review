@@ -38,14 +38,14 @@ public class _01_stream6 {
 		
 //		11. 위에서 만든 스트림에서 validEnlong호출해서 3년씩 연장된 새로운 스트림을 만들고 "3년 연장되었습니다"라는 문구를 출력하세요.
 		
-		Stream<Card> enlongStream = cardStream.map(c -> {c.validEnlong(3, c.getValidYear());
-															
-															return c;
-														});
-		
-		enlongStream.forEach(c -> System.out.println("3년 연장되었습니다."));
-		
-//
+//		Stream<Card> enlongStream = cardStream.map(c -> {c.validEnlong(3, c.getValidYear());
+//															
+//															return c;
+//														});
+//		
+//		enlongStream.forEach(c -> System.out.println("3년 연장되었습니다."));
+//		
+////
 //		12. 연장된 카드들의 정보를 "c카드의 유효기간은 3년입니다."라고 출력하세요.
 //
 //		enlongStream.forEach(c -> System.out.println(c.getCardName() + "카드의 유효기간은 3년입니다."));
