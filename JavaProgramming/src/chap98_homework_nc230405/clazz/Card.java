@@ -1,6 +1,6 @@
 package chap98_homework_nc230405.clazz;
 
-public class Card{
+public class Card implements CardVali{
 //	6. 클래스 Card를 만들고 String cardName; int validYear; 멤버변수를 생성하고 getter/setter 및 유효기간을 연장하는 void validEnlong을 만듭니다.
 
 	private String cardName;
@@ -34,6 +34,13 @@ public class Card{
 	public void validEnlong(int year, CardVali cv) {
 		validYear += year;
 		cv.enlong(year);
+	}
+
+
+	@Override
+	public void enlong(int year) {
+		// TODO Auto-generated method stub
+		System.out.println("유효기간이 " + year + "년 연장되었습니다!");
 	}	
 	
 	
