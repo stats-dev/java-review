@@ -11,15 +11,26 @@ import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.Writer;
 
+//import chap19_multiThread._08_NonSyncShareObj;
+
 public class _08_byteStreamToCharStream {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		write("aaa"); //write 먼저 호출
-//		write("bbb");
-		String str = read();
-		System.out.println(str);
+		String str = "";
+		for(int i = 0; i < 20; i++) {
+			str =  str + String.valueOf(i) + "\n";
+		}
 		
+		write(str);
+		str = read();
+		System.out.println(str);
+//		
+//		write("aaa\nbbb\nccc"); //write 먼저 호출
+////		write("bbb");
+//		String str = read();
+//		System.out.println(str);
+//		
 
 	}
 	
