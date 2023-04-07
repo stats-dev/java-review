@@ -17,7 +17,6 @@ public class _02_arithmeticOperator {
 		
 		//2. 산술연산자
 		int result;
-		"한글이 잘 쳐지나요?"
 
 		//덧셈
 		result = num1 + num2;
