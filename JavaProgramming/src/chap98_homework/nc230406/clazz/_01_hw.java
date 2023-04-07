@@ -75,7 +75,8 @@ public class _01_hw {
 						+ ", " + hp.getAchivement() + ", "
 						+ hp.getCountry())); //성씨가 이인 사람만 구한다.
 		
-		
+
+		System.out.println("----------------------------");
 		
 		//5. 성씨가 명확한 근거가 없어서 성씨에 해당하는 배열을 만들어준다.
 		hpStream = hpList.stream();
@@ -84,7 +85,9 @@ public class _01_hw {
 		
 		hpStream.filter(hp -> {
 					for(String fName : firstName) {
-						return hp.getName().contains(fName);
+						if(hp.getName().contains(fName)) {
+							return true; //이렇게 if문으로 해야 반복적으로 검사가 진행될 수 있어 꼭 넣어주기를 ㅜ건장함.
+						}
 					}
 					return false; //밖으로 나오면 false로 처리해줘야 마무리가 된다.
 				})
