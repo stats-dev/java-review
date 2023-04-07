@@ -10,7 +10,7 @@ public class _17_parallelStream {
 		// TODO Auto-generated method stub
 		List<Integer> scoreList = new ArrayList<Integer>();
 		
-		for(int i = 0; i < 100000000; i++) {
+		for(int i = 0; i < 1000000; i++) {
 			scoreList.add((int)(Math.random() * 100) + 1);
 		}
 		
