@@ -28,6 +28,8 @@ public class _01_stream {
 						.filter(c -> c.length() >= 5)
 						.forEach(str -> System.out.println(str));
 		
+		sc.close();
+		
 
 
 	}
