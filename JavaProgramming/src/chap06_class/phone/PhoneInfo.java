@@ -56,7 +56,7 @@ public class PhoneInfo {
 		
 		OutputStream os;
 		try {
-			os = new FileOutputStream("D:/lecture/Java/phoneInfo.txt");
+			os = new FileOutputStream("D:/lecture/Java/phoneInfo.txt", true);
 			
 			Writer writer = new OutputStreamWriter(os, "UTF-8"); //보조스트림 사용
 			
