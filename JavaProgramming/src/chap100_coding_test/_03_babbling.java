@@ -1,6 +1,6 @@
 package chap100_coding_test;
 
-public class Babbling {
+public class _03_babbling {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

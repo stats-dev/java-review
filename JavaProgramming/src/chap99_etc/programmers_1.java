@@ -1,7 +1,7 @@
 package chap99_etc;
 
-import java.util.HashMap;
-import java.util.Map;
+//import java.util.HashMap;
+//import java.util.Map;
 
 public class programmers_1 {
 //	players	callings	result
@@ -10,7 +10,7 @@ public class programmers_1 {
 		// TODO Auto-generated method stub
 		String[] players = {"mumu", "soe", "poe", "kai", "mine"};
 		String[] callings = {"kai", "kai", "mine", "mine"};
-		String[] result = {"mumu", "kai", "mine", "soe", "poe"};
+//		String[] result = {"mumu", "kai", "mine", "soe", "poe"};
 		
 //		String[] players_raw = players;
 		String[] answer = {};
