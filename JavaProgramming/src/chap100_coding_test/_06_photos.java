@@ -16,6 +16,11 @@ public class _06_photos {
 		//map으로 이름과 year 값을 연결해줍니다.
 		Map<String, Integer> photoMap = new HashMap<String, Integer>();
 		
+		for(int i = 0;i < name.length; i++) {
+			photoMap.put(name[i], year[i]);
+		}
+		
+		System.out.println(photoMap.toString());
 		
 		for(String[] p : photo) {
 			sum = 0;
@@ -32,11 +37,11 @@ public class _06_photos {
 				}
 			}
 			
-			photoMap.put(p.toString(), sum);
+//			photoMap.put(p.toString(), sum);
 
 		}
 		
-		System.out.println(photoMap.toString());
+//		System.out.println(photoMap.toString());
 		//entryset으로 잘 나오게 출력해보기.
 		
 		
