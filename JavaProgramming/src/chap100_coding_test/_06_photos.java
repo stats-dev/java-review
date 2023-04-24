@@ -40,21 +40,18 @@ public class _06_photos {
 
 							}
 							result[i] = sum;
-//							System.out.println(n +":" + sum);
 						}
 						
 					}
 					
 				}
 	
+			//최종 출력
 			for(int r : result) {
 				System.out.println(r);
 			}
 
-		
 
-
-		
 	}
 
 }
