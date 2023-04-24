@@ -2,7 +2,10 @@ package chap100_coding_test;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
 
 public class _06_photos {
 
@@ -22,33 +25,35 @@ public class _06_photos {
 		
 		System.out.println(photoMap.toString());
 		
-		for(String[] p : photo) {
-			sum = 0;
-			
-			for(int i = 0; i < p.length; i++) {
-				if (p[i].equals("may")) {
-					sum += 5;
-				} else if(p[i].equals("kein")) {
-					sum += 10;
-				} else if(p[i].equals("kain")) {
-					sum += 1;
-				} else if(p[i].equals("radi")) {
-					sum += 3;
+		Set<Entry<String, Integer>> photoSet = photoMap.entrySet();
+		
+		
+	
+
+		
+			for(int i = 0; i < photo.length; i++) {
+				sum = 0;
+					for(Map.Entry<String, Integer> ent : photoMap.entrySet()) {
+						for(String n : photo[i]) {
+							if (n.equals(ent.getKey())) {
+								sum += ent.getValue();
+
+							}
+							result[i] = sum;
+//							System.out.println(n +":" + sum);
+						}
+						
+					}
+					
 				}
+	
+			for(int r : result) {
+				System.out.println(r);
 			}
-			
-//			photoMap.put(p.toString(), sum);
-
-		}
-		
-//		System.out.println(photoMap.toString());
-		//entryset으로 잘 나오게 출력해보기.
-		
-		
 
 		
-//		if(photo[1])
-		
+
+
 		
 	}
 
