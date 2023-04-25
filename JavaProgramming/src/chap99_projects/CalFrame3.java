@@ -11,8 +11,8 @@ public class CalFrame3 extends JFrame {
 	
 	Container c;
 	//배열로 작성
-	JButton buttonList[] = new JButton[4];
-	String strLst[] = {"b1","b2","back","forward"};
+	JButton buttonList[] = new JButton[5];
+	String strLst[] = {"b1","b2","back","forward","reset"};
 		
 	
 	//껍데기 작성
@@ -35,7 +35,7 @@ public class CalFrame3 extends JFrame {
 		c.setLayout(new FlowLayout());
 		JLabel lab1 = new JLabel("My program");
 		c.add(lab1);
-		for(int i = 0; i < 4; i++) {
+		for(int i = 0; i < 5; i++) {
 			buttonList[i] = new JButton(strLst[i]);
 			c.add(buttonList[i]);
 		}
