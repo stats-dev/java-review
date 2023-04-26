@@ -2,6 +2,7 @@ package chap99_projects;
 
 import java.awt.Container;
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -9,11 +10,15 @@ import javax.swing.JLabel;
 
 public class CalFrame4 extends JFrame {
 	
-	Container c;
+	Container c = getContentPane();
 	//배열로 작성
-	JButton buttonList[] = new JButton[5];
-	String strLst[] = {"b1","b2","back","forward","reset"};
 		
+	//GridLayout(int rows, int cols) -> row개 행과 cols개 열로 분할한다. 값은 0으로 초기화
+	//계산기는 3 * 4 이다.
+	GridLayout grid = new GridLayout(3,4);
+	
+	
+	
 	
 	//껍데기 작성
 	CalFrame4()
