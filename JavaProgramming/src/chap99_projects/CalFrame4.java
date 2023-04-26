@@ -7,7 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class CalFrame3 extends JFrame {
+public class CalFrame4 extends JFrame {
 	
 	Container c;
 	//배열로 작성
@@ -16,11 +16,11 @@ public class CalFrame3 extends JFrame {
 		
 	
 	//껍데기 작성
-	CalFrame3()
+	CalFrame4()
 	{
 		
 	
-		setTitle("강호현 계산기 프레임");
+		setTitle("두번째 그리드 프레임");
 		setSize(300, 400);
 		//종료 버튼 작성
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
