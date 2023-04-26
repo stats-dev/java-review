@@ -8,7 +8,8 @@ public class _01_swing_basics {
 	
 //		new CalFrame01();
 //		new CalFrame2();
-		new CalFrame3();
+//		new CalFrame3();
+		new CalFrame_gridlayout();
 	}
 
 
