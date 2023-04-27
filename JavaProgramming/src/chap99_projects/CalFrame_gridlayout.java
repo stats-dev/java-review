@@ -45,7 +45,7 @@ public class CalFrame_gridlayout extends JFrame {
 		//문제는 grid layout은 컴포넌트 크기가 고정된다고 한다.
 		
 		
-		setTitle("test");
+		setTitle("강호현의 계산기");
 		setSize(300, 400);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
