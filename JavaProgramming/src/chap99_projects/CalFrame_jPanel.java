@@ -120,7 +120,7 @@ public class CalFrame_jPanel extends JFrame {
 		container.add(panel, BorderLayout.CENTER);
 		
 			
-		frame.setTitle("강호현의 계산기");
+		frame.setTitle("강호현의 계산기_수정");
 		frame.setSize(300, 400);
 		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
