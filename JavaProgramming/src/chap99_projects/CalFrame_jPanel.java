@@ -8,15 +8,16 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class CalFrame_jPanel extends JFrame {
 	
+
 	public CalFrame_jPanel() {
 
 		//frame 객체 생성
@@ -52,6 +53,8 @@ public class CalFrame_jPanel extends JFrame {
 		//글자 크기를 조정합니다.
 		txtField.setFont(new Font("Arial", Font.PLAIN, 20));
 		
+		
+		
 		container.add(txtField, BorderLayout.NORTH);
 		
 		
@@ -72,15 +75,16 @@ public class CalFrame_jPanel extends JFrame {
 			panel.add(buttons[i]);
 		}
 		
+		buttons[7] = new JButton(String.valueOf("-"));
+		panel.add(buttons[7]); //add 순서도 중요하다.
 
-		//7,8,9번째
+		//8,9,10번째
 		for(int i=1; i<=3; i++) {
-			buttons[i+6] = new JButton(String.valueOf(i));
-			panel.add(buttons[i+6]);
+			buttons[i+7] = new JButton(String.valueOf(i));
+			panel.add(buttons[i+7]);
 		}
 		
 		
-		buttons[10] = new JButton(String.valueOf("-"));
 		buttons[11] = new JButton(String.valueOf("x"));
 		buttons[12] = new JButton(String.valueOf(0)); 
 		buttons[13] = new JButton(String.valueOf("00"));
@@ -95,6 +99,7 @@ public class CalFrame_jPanel extends JFrame {
 		panel.add(buttons[15]);
 
 		
+		
 		for(int i = 0; i < buttons.length; i++) {
 			JButton button = buttons[i];
 			button.addActionListener(new ActionListener() {
@@ -102,20 +107,15 @@ public class CalFrame_jPanel extends JFrame {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
-					txtField.setText(button.getText());
-					
+					String buText = button.getText();
+					txtField.setText(buText);
+					//buText의 값을 아스키코드 기반으로 숫자라면 저장하고, 다음에 연산자를 추가하고, =을 눌렀을 때 연산을 수행해야 한다.
 				}
 			});
 		}
 		
 		
-//		panel.add(new JButton(String.valueOf(0)));
-//		
-//		panel.add(new JButton("00"));
-//		panel.add(new JButton("="));
-//		panel.add(new JButton("/"));
-		
-		
+
 		//문제는 grid layout은 컴포넌트 크기가 고정된다고 한다.
 		container.add(panel, BorderLayout.CENTER);
 		
@@ -124,8 +124,7 @@ public class CalFrame_jPanel extends JFrame {
 		frame.setSize(300, 400);
 		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
-//		frame.pack();
-		//눈에 보인다.
+
 		frame.setVisible(true); 
 		
 		
