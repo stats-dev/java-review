@@ -109,7 +109,8 @@ public class CalFrame_jPanel extends JFrame {
 					// TODO Auto-generated method stub
 					String buText = button.getText();
 					txtField.setText(buText);
-					//buText의 값을 아스키코드 기반으로 숫자라면 저장하고, 다음에 연산자를 추가하고, =을 눌렀을 때 연산을 수행해야 한다.
+					calculator(buText);
+
 				}
 			});
 		}
@@ -127,8 +128,94 @@ public class CalFrame_jPanel extends JFrame {
 
 		frame.setVisible(true); 
 		
+	
+	
+		
+	}
+	
+	public static void calculator(String input) {
+		System.out.println(input);
+		boolean isFinished = false;
+		boolean isOperator = false;
+		String num1 = "0";
+		String num2 = "0";
+		char op = ' ';
+		double n1 = num1.charAt(0);
+		double n2 = num2.charAt(0);
+		
+		//연산자와 문자 확인
+		if(input.charAt(0) >= 48 && input.charAt(0) <= 57) {
+			num1 += input.charAt(0);
+		} else {
+			if(input.charAt(0) != '=') {
+				isOperator = true;
+				if(isOperator) num2 += input.charAt(0);
+				op = input.charAt(0);
+			} else {
+				isFinished = true;
+				System.out.println(op + n1 + n2);
+			
+			}
+		}
+		if(isFinished) System.out.println(cal(op, n1, n2));
+		
+//		if(isFinished) {
+//
+//			switch (op) {
+//			case '+':
+//				System.out.println(n1 + n2);
+//				break;
+//			case '-':
+//				System.out.println(n1 - n2);
+//				break;
+//			case '*':
+//				System.out.println(n1 * n2);
+//				break;
+//			case '/':
+//				if(n2 != 0) {
+//					System.out.println(n1 / n2);	        		
+//				} else {
+//					System.out.println("잘못된 수식이다.");
+//				}
+//				break;
+//			default:
+//				System.out.println("다시입력");
+//			}
+//		}
+				
 		
 		
+	}
+	
+	public static double cal(char op, double n1, double n2) {
+		double result = 0;
+		switch (op) {
+		case '+':
+			System.out.println(n1 + n2);
+			result = n1 + n2;
+			break;
+		case '-':
+			System.out.println(n1 - n2);
+			result = n1 - n2;
+			break;
+		case '*':
+			System.out.println(n1 * n2);
+			result = n1 * n2;
+			break;
+		case '/':
+			if(n2 != 0) {
+				System.out.println(n1 / n2);
+				result = n1 / n2;
+			} else {
+				System.out.println("잘못된 수식이다.");
+			}
+			break;
+		default:
+			System.out.println("다시입력");
+		}
+		
+		
+		return result;
 	}
 
 
