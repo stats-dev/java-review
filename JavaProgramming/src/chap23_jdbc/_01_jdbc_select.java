@@ -21,8 +21,8 @@ public class _01_jdbc_select {
 //				"jdbc:oracle:thin:@IP주소:1521:xe"; //1521
 		
 		//접속할 계정 정보
-		final String USER = "c##study";
-		final String PASSWORD = "!dkdlxl1234";
+		final String USER = "c##아이디";
+		final String PASSWORD = "비밀번호";
 		
 		//커넥션 변수
 		Connection conn = null;

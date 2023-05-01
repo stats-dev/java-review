@@ -42,7 +42,7 @@ public class _04_jdbc_delete {
 			conn = DriverManager.getConnection(DB_URL, USER, PASSWORD);
 			
 			//SQL 쿼리 생성
-			//update sql 쿼리문
+			//DELETE sql 쿼리문
 			String sql = "DELETE FROM STUDENT WHERE SNO = ?";
 			
 			//PreparedStatement 객체 생성
