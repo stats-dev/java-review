@@ -2,11 +2,12 @@ package chap23_jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class _01_jdbc_select {
+public class _03_jdbc_update {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -27,8 +28,9 @@ public class _01_jdbc_select {
 		//커넥션 변수
 		Connection conn = null;
 		
-		//쿼리 구문 변수 선언
-		Statement statement = null;
+		
+		//파라미터를 가지는 쿼리구문 변수 선언 (Insert, update)
+		PreparedStatement pstmt = null;
 		
 		
 		try {
@@ -40,41 +42,32 @@ public class _01_jdbc_select {
 			conn = DriverManager.getConnection(DB_URL, USER, PASSWORD);
 			
 			//SQL 쿼리 생성
-			statement = conn.createStatement();
-			///학생번호, 학생이름, 학생별 평균 기말고사 성적
-//			String sql = "SELECT * FROM STUDENT";
-//			String sql =
-//					"SELECT ST.SNO"
-//					+ "	  , ST.SNAME"
-//					+ "	  , ROUND(AVG(SC.RESULT), 2) AS AVGRES"
-//					+ " FROM STUDENT ST" // 한칸 띄어야 인식이됨.
-//					+ " JOIN SCORE SC"
-//					+ "	ON ST.SNO = SC.SNO"
-//					+ " GROUP BY ST.SNO, ST.SNAME";
-//			
-			//INSERT에서 추가한 8003번 임꺽정 학생 출력
-			String sql = "SELECT * FROM STUDENT WHERE SNO = '8003'";
+			//update sql 쿼리문
+			String sql = "UPDATE STUDENT"
+					+ "  SET"
+					+ "  	  AVR = ?"
+					+ "  WHERE SNO = ?";
+			
+			//PreparedStatement 객체 생성
+			pstmt = conn.prepareStatement(sql);
+			//들어갈 파라미터들 세팅
+			//파라미터 세팅은 물음표의 개수와 동일하게 설정
+			pstmt.setDouble(1, 1.45);
+			pstmt.setString(2, "8003");
 
 			
-			//결과를 담아줄 ResultSet 변수 선언.
-			//select => executeQuery(sql);
-			//insert, update, delete => executeUpdate(sql);
-			ResultSet resultSet = statement.executeQuery(sql);
-				
-			//결과 출력
-			while(resultSet.next()) {
-				String sno = resultSet.getString("sno");
-				String sname = resultSet.getString("sname");
-//				Double avgres = resultSet.getDouble("avgres");
-				
-//				System.out.println("학번 : " + sno + ", 이름 : " + sname + 
-//						", 평균 성적 : " + avgres);
-				System.out.println("학번 : " + sno + ", 이름 : " + sname);
-				
+			//insert, delete, update는 결과로 영향받은 행의 개수를 리턴
+			int result = pstmt.executeUpdate(); //result 개수 나옴
+			
+			if(result >= 1) { //1보다 크거나 같을 때로 변경함.
+				System.out.println("수정되었습니다.");
+			} else {
+				System.out.println("수정에 실패하였습니다.");
 			}
+			
+			
 			//다 쓴 객체들 해제
-			resultSet.close();
-			statement.close();
+			pstmt.close();
 			conn.close();
 
 
@@ -86,9 +79,9 @@ public class _01_jdbc_select {
 			// TODO: handle exception
 			System.out.println(e.getMessage());
 		} finally {
-			if(statement != null){
+			if(pstmt != null){
 				try {
-					conn.close();
+					pstmt.close();
 				} catch (SQLException se) {
 					// TODO: handle exception
 					System.out.println(se.getMessage());
