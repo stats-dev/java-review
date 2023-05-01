@@ -41,7 +41,15 @@ public class _01_jdbc_select {
 			
 			//SQL 쿼리 생성
 			statement = conn.createStatement();
-			String sql = "SELECT * FROM STUDENT";
+			///학생번호, 학생이름, 학생별 평균 기말고사 성적
+//			String sql = "SELECT * FROM STUDENT";
+			String sql =
+					"SELECT SNO"
+					+ "	  , ST.SNAME"
+					+ "	  , ROUND(AVG(SC.RESULT), 2) AS AVRES"
+					+ " FROM STUDENT ST"
+					+ " NATURAL JOIN SCORE SC"
+					+ " GROUP BY SNO, ST.SNAME";
 					
 			//결과를 담아줄 ResultSet 변수 선언.
 			//select => executeQuery(sql);
@@ -52,8 +60,10 @@ public class _01_jdbc_select {
 			while(resultSet.next()) {
 				String sno = resultSet.getString("sno");
 				String sname = resultSet.getString("sname");
+				String avres = resultSet.getString("avres");
 				
-				System.out.println("학번 : " + sno + ", 이름 : " + sname);
+				System.out.println("학번 : " + sno + ", 이름 : " + sname + 
+						", 평균 성적 : " + avres);
 			}
 			//다 쓴 객체들 해제
 			resultSet.close();
