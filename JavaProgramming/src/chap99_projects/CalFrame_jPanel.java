@@ -157,31 +157,31 @@ public class CalFrame_jPanel extends JFrame {
 			
 			}
 		}
-		if(isFinished) System.out.println(cal(op, n1, n2));
+//		if(isFinished) System.out.println(cal(op, n1, n2));
 		
-//		if(isFinished) {
-//
-//			switch (op) {
-//			case '+':
-//				System.out.println(n1 + n2);
-//				break;
-//			case '-':
-//				System.out.println(n1 - n2);
-//				break;
-//			case '*':
-//				System.out.println(n1 * n2);
-//				break;
-//			case '/':
-//				if(n2 != 0) {
-//					System.out.println(n1 / n2);	        		
-//				} else {
-//					System.out.println("잘못된 수식이다.");
-//				}
-//				break;
-//			default:
-//				System.out.println("다시입력");
-//			}
-//		}
+		if(isFinished) {
+
+			switch (op) {
+			case '+':
+				System.out.println(n1 + n2);
+				break;
+			case '-':
+				System.out.println(n1 - n2);
+				break;
+			case '*':
+				System.out.println(n1 * n2);
+				break;
+			case '/':
+				if(n2 != 0) {
+					System.out.println(n1 / n2);	        		
+				} else {
+					System.out.println("잘못된 수식이다.");
+				}
+				break;
+			default:
+				System.out.println("다시입력");
+			}
+		}
 				
 		
 		
