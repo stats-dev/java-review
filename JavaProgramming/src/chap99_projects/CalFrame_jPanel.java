@@ -109,7 +109,7 @@ public class CalFrame_jPanel extends JFrame {
 					// TODO Auto-generated method stub
 					String buText = button.getText();
 					txtField.setText(buText);
-					calculator(buText);
+					calculator(buText); //ifelse로 처리해주
 
 				}
 			});
