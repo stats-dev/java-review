@@ -109,10 +109,30 @@ public class CalFrame_jPanel extends JFrame {
 					// TODO Auto-generated method stub
 					String buText = button.getText();
 					txtField.setText(buText);
-					calculator(buText); //ifelse로 처리해주
+//					calculator(buText); //ifelse로 처리
 
+					switch (buText) {
+					case '+':
+						System.out.println(n1 + n2);
+						break;
+					case '-':
+						System.out.println(n1 - n2);
+						break;
+					case '*':
+						System.out.println(n1 * n2);
+						break;
+					case '/':
+						if(n2 != 0) {
+							System.out.println(n1 / n2);	        		
+						} else {
+							System.out.println("잘못된 수식이다.");
+						}
+						break;
+					default:
+						System.out.println("다시입력");
+					}
 				}
-			});
+				
 		}
 		
 		
@@ -157,7 +177,6 @@ public class CalFrame_jPanel extends JFrame {
 			
 			}
 		}
-//		if(isFinished) System.out.println(cal(op, n1, n2));
 		
 		if(isFinished) {
 
