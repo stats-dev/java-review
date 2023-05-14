@@ -112,16 +112,16 @@ public class CalFrame_jPanel extends JFrame {
 //					calculator(buText); //ifelse로 처리
 
 					switch (buText) {
-					case '+':
+					case "+":
 						System.out.println(n1 + n2);
 						break;
-					case '-':
+					case "-":
 						System.out.println(n1 - n2);
 						break;
-					case '*':
+					case "*":
 						System.out.println(n1 * n2);
 						break;
-					case '/':
+					case "/":
 						if(n2 != 0) {
 							System.out.println(n1 / n2);	        		
 						} else {
