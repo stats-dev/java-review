@@ -4,7 +4,7 @@ package chap100_coding_test;
 import java.util.HashMap;
 import java.util.Map;
 
-public class _01_runningRace {
+public class _01_runningRace2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -24,43 +24,33 @@ public class _01_runningRace {
 		String[] result = {"mumu", "kai", "mine", "soe", "poe"};
 		
 		
+		String temp = "";
 		
-		
-		
-		
-		
-		
-		Map<String, Integer> pMap = new HashMap<String, Integer>();
-		
-		for(int i = 0; i < players.length; i++) {
-			pMap.put(players[i], i);
-		}
-		
-		System.out.println(pMap);
-		System.out.println(pMap.values());
-//		{mine=4, kai=3, mumu=0, poe=2, soe=1}
-//		[4, 3, 0, 2, 1]
-//
-//		
-		//순서(value값)을 모두 변경한다.
-		for(String c : callings) {
-			int idx = pMap.get(c); //각 선수의 순위값 저장
-			if (idx > 0) { //1등이 아니면,
-				String temp = players[idx - 1]; //앞의 순위 선수
-				players[idx - 1] = players[idx]; //앞의 선수는 현재 선수가 된다.
-				players[idx] = temp;//현재 순위는 앞의 선수가 다시 뒤로 밀려남.
-				
-				pMap.put(players[idx - 1], idx - 1);
-//				pMap.put(players[idx], idx); //그 바뀐 앞, 뒤 선수의 순서와 이름을 모두 반영한다.
-				
-				
+//		for(int i = 0; i < callings.length; i++) {
+//			for(int j = 0; j < players.length; j++) {
+//				if(callings[i] == players[j]) {
+//					temp = players[j-1];
+//					players[j-1]=players[j];
+//					players[j] = temp;
+//				}
+//			}
+//		}
+
+		for(int i = 0; i < callings.length; i++) {
+			for(int j = 0; j < players.length; j++) {
+				if(callings[i] == players[j]) {
+					temp = players[j-1];
+					players[j-1]=players[j];
+					players[j] = temp;
+				}
 			}
-			
 		}
+		
 		
 		
 		for(String p : players) {
-			System.out.println(p); 
+			System.out.printf("%s, ", p);
+			
 		}
 		
 		
