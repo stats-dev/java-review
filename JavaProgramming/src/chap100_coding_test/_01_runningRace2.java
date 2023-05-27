@@ -26,15 +26,6 @@ public class _01_runningRace2 {
 		
 		String temp = "";
 		
-//		for(int i = 0; i < callings.length; i++) {
-//			for(int j = 0; j < players.length; j++) {
-//				if(callings[i] == players[j]) {
-//					temp = players[j-1];
-//					players[j-1]=players[j];
-//					players[j] = temp;
-//				}
-//			}
-//		}
 
 		for(int i = 0; i < callings.length; i++) {
 			for(int j = 0; j < players.length; j++) {
