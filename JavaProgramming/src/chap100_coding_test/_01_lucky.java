@@ -1,22 +1,15 @@
 package chap100_coding_test;
 
-<<<<<<< HEAD
-=======
 import java.util.Scanner;
-
->>>>>>> a3ae10cd4859b0e732ff546a617994a776a11b73
-public class _01_lucky {
+public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-<<<<<<< HEAD
 
 		int n = 123402;
 		
 		System.out.println(n);
-		
-		
-=======
+
 //		int N = 99999999;
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
@@ -48,7 +41,6 @@ public class _01_lucky {
 //		System.out.println(sum2);
 		
 //		for(int i=0;i<)
->>>>>>> a3ae10cd4859b0e732ff546a617994a776a11b73
 	}
 
 }
